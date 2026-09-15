@@ -1,0 +1,138 @@
+<!-- Base Template with Navigation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shivkrupa Mobile & Electronics provides TV, mobile and electronics repair services. Contact us by call or WhatsApp and get directions to our shop.">
+    <meta name="keywords" content="TV Repair, Mobile Repair, Electronics Repair, Remote Sales, Shivkrupa">
+    <meta property="og:title" content="Shivkrupa Mobile & Electronics | TV & Mobile Repair">
+    <meta property="og:description" content="Shivkrupa Mobile & Electronics provides TV, mobile and electronics repair services. Contact us by call or WhatsApp.">
+    <meta property="og:type" content="business.business">
+    
+    <!-- JSON-LD LocalBusiness Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Shivkrupa Mobile & Electronics",
+        "description": "Professional TV, Mobile and Electronics Repair Services",
+        "telephone": "+91-9860310070",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sr.No.281, Gajanan Dairy backside H3, Pre School, Dhanori-Lohegaon Rd, opposite Porwal Road, Kutwal Colony, Lohegaon, Pune, Maharashtra 411047",
+            "addressLocality": "Pune",
+            "addressRegion": "Maharashtra",
+            "postalCode": "411047"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "10:00",
+            "closes": "21:00"
+        },
+        "priceRange": "Affordable"
+    }
+    </script>
+    
+    <title>Shivkrupa Mobile & Electronics | TV & Mobile Repair</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="{{ url_for('static', filename='images/shivkrupa-logo.png') }}"
+                     alt="Shivkrupa logo"
+                     class="logo-image">
+                <div class="logo-text">
+                    <div class="logo-main">SHIVKRUPA</div>
+                    <div class="logo-sub">Mobile & Electronics</div>
+                </div>
+            </div>
+            
+            <!-- Hamburger Menu Button -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="/" class="nav-item">Home</a>
+                <a href="/services" class="nav-item">Services</a>
+                <a href="/about" class="nav-item">About Us</a>
+                <a href="/repair" class="nav-item">Repair Service</a>
+                <a href="/contact" class="nav-item">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="{{ url_for('static', filename='images/shivkrupa-logo.png') }}"
+                             alt="Shivkrupa logo"
+                             class="footer-logo-image">
+                        <div class="footer-logo-text">
+                            <div class="footer-logo-main">SHIVKRUPA</div>
+                            <div class="footer-logo-sub">MOBILE & ELECTRONICS</div>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Your one-stop solution for Mobile, TV & Electronics Repair Services.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/repair">Repair Service</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>OUR SERVICES</h4>
+                    <ul>
+                        <li><a href="/services">📺 TV Repair</a></li>
+                        <li><a href="/services">📱 Mobile Repair</a></li>
+                        <li><a href="/services">🖥️ Display Replacement</a></li>
+                        <li><a href="/services">⚙️ Electronics Repair</a></li>
+                        <li><a href="/services">📡 Remote Sales</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>CONTACT US</h4>
+                    <ul class="contact-list">
+                        <li><a href="tel:+91-9860310070">📞 +91-9860310070/7767887645</a></li>
+                        <li><a href="https://wa.me/919860310070">💬 WhatsApp Us</a></li>
+                        <li>📍 Shivkrupa Mobile & Electronics</li>
+                        <li>Sr.No.281, Gajanan Dairy backside H3, Pre School,Dhanori-Lohegaon Rd, </li>
+                        <li> opposite Porwal Road, Kutwal Colony, Lohegaon, Pune, Maharashtra 411047</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Shivkrupa Mobile & Electronics. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
