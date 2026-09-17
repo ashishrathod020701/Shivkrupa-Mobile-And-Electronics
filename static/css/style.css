@@ -139,6 +139,9 @@ main {
 }
 
 .logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
     line-height: 1.2;
 }
 
@@ -180,6 +183,11 @@ main {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    border: 0;
+    padding: 0.35rem;
+    border-radius: 0.35rem;
+    background-color: var(--accent-red);
+    transition: var(--transition-fast);
 }
 
 .hamburger span {
@@ -189,6 +197,11 @@ main {
     margin: 4px 0;
     transition: var(--transition-fast);
     border-radius: 2px;
+}
+
+.hamburger:hover,
+.hamburger.active {
+    background-color: var(--accent-red-light);
 }
 
 /* ===== PAGE HEADER ===== */
@@ -413,6 +426,18 @@ main {
     background-color: #f2f2f2;
     border-color: #cccccc;
     color: #222222;
+}
+
+.home-page .book-now-button {
+    background-color: var(--accent-red);
+    color: var(--text-light);
+    border-color: var(--accent-red);
+}
+
+.home-page .book-now-button:hover {
+    background-color: var(--accent-red-light);
+    border-color: var(--accent-red-light);
+    color: var(--text-light);
 }
 
 .call-button-image {
