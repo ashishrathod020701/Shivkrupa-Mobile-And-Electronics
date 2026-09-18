@@ -686,6 +686,327 @@ main {
     line-height: 1.7;
 }
 
+.service-card-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+}
+
+.service-card-link .btn {
+    margin-top: auto;
+    align-self: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.service-detail-section,
+.booking-section {
+    background-color: var(--secondary-dark);
+    padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.service-detail-shell,
+.booking-shell {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-detail-card,
+.booking-panel {
+    background-color: var(--primary-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.service-detail-header {
+    background: linear-gradient(135deg, var(--primary-darker) 0%, var(--secondary-dark) 100%);
+    border-bottom: 2px solid var(--accent-red);
+    padding: var(--spacing-lg);
+}
+
+.service-detail-body {
+    display: grid;
+    grid-template-columns: 1.1fr 1.9fr;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl);
+}
+
+.service-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.12), rgba(255, 107, 53, 0.08));
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: var(--spacing-lg);
+}
+
+.service-visual-badge {
+    font-size: clamp(4rem, 8vw, 8rem);
+    text-align: center;
+}
+
+.service-content h2 {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-content .service-description {
+    font-size: 1.05rem;
+    color: var(--text-gray);
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-section-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-red);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-feature-list,
+.service-detail-list {
+    list-style: none;
+    margin: 0 0 var(--spacing-lg);
+    padding: 0;
+    display: grid;
+    gap: 0.65rem;
+}
+
+.service-feature-list li,
+.service-detail-list li {
+    color: var(--text-gray);
+    font-size: 0.98rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-feature-list li::before,
+.service-detail-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-red);
+    font-weight: 700;
+}
+
+.service-info-box {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-info-box h3,
+.service-charge-card h3 {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.service-info-box p,
+.service-charge-card p {
+    color: var(--text-gray);
+    margin-bottom: 0;
+}
+
+.service-charge-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-charge-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    color: var(--text-light);
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.service-charge-table th,
+.service-charge-table td {
+    border: 1px solid var(--border-color);
+    padding: 0.85rem 0.9rem;
+    text-align: left;
+}
+
+.service-charge-table th {
+    background-color: rgba(231, 76, 60, 0.12);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.service-charge-table td {
+    color: var(--text-gray);
+}
+
+.service-charge-table td.price-cell {
+    color: var(--text-light);
+    font-weight: 700;
+    text-align: right;
+}
+
+.service-note {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.booking-panel {
+    padding: var(--spacing-lg);
+}
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.form-group label {
+    margin-bottom: 0.45rem;
+    display: inline-block;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+}
+
+.booking-summary {
+    background-color: rgba(39, 174, 96, 0.08);
+    border: 1px solid rgba(39, 174, 96, 0.5);
+    border-radius: 0.75rem;
+    padding: var(--spacing-lg);
+    display: none;
+}
+
+.booking-summary.visible {
+    display: block;
+}
+
+.booking-summary h3 {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.booking-summary-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-lg);
+    display: grid;
+    gap: 0.5rem;
+}
+
+.booking-summary-list li {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.booking-summary-list strong {
+    color: var(--text-light);
+}
+
+.summary-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.time-slot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+}
+
+.time-slot-btn {
+    background-color: var(--secondary-dark);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.time-slot-btn:hover,
+.time-slot-btn.selected {
+    background-color: rgba(231, 76, 60, 0.12);
+    border-color: var(--accent-red);
+    color: var(--text-light);
+}
+
+.preferred-time-note {
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.booking-side-panel {
+    background-color: var(--primary-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: var(--spacing-lg);
+}
+
+.booking-side-panel h3 {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.booking-side-panel p {
+    color: var(--text-gray);
+    margin-bottom: 0.75rem;
+}
+
+.booking-side-panel .service-chip {
+    display: inline-block;
+    margin-top: var(--spacing-sm);
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background-color: rgba(231, 76, 60, 0.12);
+    border: 1px solid rgba(231, 76, 60, 0.5);
+    color: var(--text-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
 /* ===== WHY CHOOSE US SECTION ===== */
 .why-choose-us {
     background-color: var(--primary-dark);
@@ -1220,6 +1541,19 @@ main {
     .repair-container {
         grid-template-columns: 1fr;
     }
+
+    .service-detail-body,
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .time-slot-grid {
+        grid-template-columns: 1fr 1fr;
+    }
     
     .footer-bottom {
         flex-direction: column;
@@ -1262,6 +1596,17 @@ main {
     }
     
     .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card-link .btn,
+    .summary-actions .btn,
+    .detail-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .time-slot-grid {
         grid-template-columns: 1fr;
     }
 }
